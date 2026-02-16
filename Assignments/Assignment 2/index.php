@@ -1,6 +1,6 @@
 <?php
 
-// Even Numbers 1–50 (even only)
+// Even Numbers
 $SevenNumbers = "Even Numbers: ";
 $numbers = range(1, 50);
 
@@ -10,11 +10,10 @@ foreach ($numbers as $num) {
     }
 }
 
-// Remove last " - "
 $SevenNumbers = rtrim($SevenNumbers, " - ");
 
 
-// Heredoc Form (Bootstrap styled with accessibility)
+// Heredoc Form
 $form = <<<FORM
 <form class="mt-4">
   <div class="mb-3">
@@ -30,7 +29,7 @@ $form = <<<FORM
 FORM;
 
 
-// Function to create Bootstrap Table
+// Table
 function createTable($rows, $columns) {
     $table = '<table class="table table-bordered mt-4">';
     
