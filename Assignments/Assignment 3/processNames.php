@@ -3,38 +3,38 @@ function addClearNames() {
     $action = $_POST["action"];
     $currentNames = $_POST["namelist"];
 
-    // If clear button clicked, return empty string
+    // Clear Names
     if ($action == "clear") {
         return "";
     }
 
-    // Add name action
+    // Add name
     $nameInput = trim($_POST["nameInput"]);
 
-    // Split input into first and last name
+    // Split First and Last Name
     $parts = explode(" ", $nameInput);
     $firstName = ucfirst(strtolower($parts[0]));
     $lastName = ucfirst(strtolower($parts[1]));
 
-    // Format as "Lastname, Firstname"
+    // Formats Names
     $formattedName = $lastName . ", " . $firstName;
 
-    // Build array of existing names
+    // Builds Array
     $namesArray = [];
     if (!empty(trim($currentNames))) {
         $namesArray = explode("\n", trim($currentNames));
-        // Clean up any empty entries
+        
         $namesArray = array_filter($namesArray, function($n) { return trim($n) !== ""; });
         $namesArray = array_values($namesArray);
     }
 
-    // Add new name
+    // Adds New Name
     array_push($namesArray, $formattedName);
 
-    // Sort alphabetically
+    // Sort Names
     sort($namesArray);
 
-    // Join back to string
+    // Back to String
     $output = implode("\n", $namesArray);
 
     return $output;
