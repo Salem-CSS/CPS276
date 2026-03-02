@@ -5,7 +5,7 @@ class Calculator {
     public function calc() {
         $args = func_get_args();
 
-        // Validate: must have exactly 3 arguments
+        // Make sure 3 Arguments
         if (count($args) !== 3) {
             return "<p>Cannot perform operation. You must have three arguments. A string for the operator (+,-,*,/) and two integers or floats for the numbers.</p>";
         }
@@ -14,12 +14,12 @@ class Calculator {
         $num1     = $args[1];
         $num2     = $args[2];
 
-        // Validate operator is a string and one of the allowed operators
+        // Make sure string is one of the arithmetics
         if (!is_string($operator) || !in_array($operator, ['+', '-', '*', '/'])) {
             return "<p>Cannot perform operation. You must have three arguments. A string for the operator (+,-,*,/) and two integers or floats for the numbers.</p>";
         }
 
-        // Validate both numbers are integers or floats (not strings, booleans, etc.)
+        // Make sure both numbers are int or float
         if (!is_int($num1) && !is_float($num1)) {
             return "<p>Cannot perform operation. You must have three arguments. A string for the operator (+,-,*,/) and two integers or floats for the numbers.</p>";
         }
