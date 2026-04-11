@@ -28,13 +28,11 @@ $date_time = new Date_time();
         </div>
         <button type="submit" class="btn btn-primary">Add Note</button>
     </form>
-
-    <!--Why are we using timestamps instead of the date.
-//Is there any advantage to using the Date_time class over just having a PHP function file.  What are they?
-//When a user requests to view notes within a specific date range, what logical steps must the application take to retrieve and present only the relevant notes, show that in your code and explain it?
-//Explain the importance of converting dates and times into a standardized format (like a timestamp) before storing them in a database. What problems might arise if you don't?
-//Imagine the application becomes very popular and has millions of notes. What performance considerations might arise when displaying notes, and how could you address them? -->
 </body>
 </html>
 
-
+//Why are we using timestamps instead of the date.
+//Is there any advantage to using the Date_time class over just having a PHP function file.  What are they?
+//When a user requests to view notes within a specific date range, what logical steps must the application take to retrieve and present only the relevant notes, show that in your code and explan it?
+//Explain the importance of converting dates and times into a standardized format (like a timestamp) before storing them in a database. What problems might arise if you don't?
+//Imagine the application becomes very popular and has millions of notes. What performance considerations might arise when displaying notes, and how could you address them?
