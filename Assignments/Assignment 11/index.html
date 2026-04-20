@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Add Display and Delete Names</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      #msg {
+        margin: 10px 0 0 0;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="container">
+        <h1>Add Display and Delete Names</h1>
+        
+        <input type="button" id="addName" class="btn btn-primary" value="Add Name">
+        <input type="button" id="clearNames" class="btn btn-primary" value="Clear Names">
+        <p id="msg"></p>
+        <div class="form-group">
+          <label for="flname">First and Last Name</label>
+          <input type="text" class="form-control" id="flname">
+        </div>
+        <h2>Name List:</h2>
+        <div id="displayNames"></div>
+
+    </div>
+
+    <script src="js/main.js"></script>
+     
+  </body>
+</html>
+
+<!-- In main.js, the addName function uses fetch() to send data to addName.php. Explain the request/response flow: what data format is sent from JavaScript, how does PHP receive it, and what format must PHP return for JavaScript to process it?
+Looking at displayNames.php, it returns different JSON structures for success cases (with names field) versus error cases (with msg field). Explain why maintaining a consistent response structure is important for the JavaScript code that processes these responses.
+In displayNames.php, the code checks if $records === "error" and also checks count($records) > 0. Explain the difference between these two conditions and why both checks are necessary before processing the database results.
+When a user clicks the "Add Name" button, main.js calls names.addName(), which then calls names.displayNames(). Explain why displayNames() is called after adding a name, and describe the sequence of AJAX requests that occur during this process.
+After clearNames.php successfully clears the database, the JavaScript calls names.displayNames() to refresh the list. Explain why this refresh is necessary and what would happen if this call were omitted. How does this demonstrate the stateless nature of HTTP requests? -->

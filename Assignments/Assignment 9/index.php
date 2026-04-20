@@ -316,4 +316,11 @@ $records = $pdo->selectAll('users');
         </div>
     </div>
 </body>
+
+<!--Why does StickyForm extend Validation instead of including validation logic directly? What are the benefits of this design?-->
+<!--Explain what "sticky form" means. How does it improve user experience compared to a non-sticky form?-->
+<!--Describe the validation process. When does validation occur, and what happens if validation fails?-->
+<!--Explain the purpose of the $formConfig array. What information does it store, and how is it used throughout the form lifecycle?-->
+<!--What is the purpose of masterStatus['error'] in the form configuration? How does it coordinate validation across multiple form fields?-->
 </html>
+
